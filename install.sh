@@ -16,8 +16,11 @@ ln -is $DIR/zshrc $HOME/.zshrc
 mkdir -p $HOME/.config/openbox/
 ln -is $DIR/openbox/rc.xml $HOME/.config/openbox/
 ln -is $DIR/openbox/autostart $HOME/.config/openbox/
+ln -is $DIR/backgrounds $HOME/.backgrounds
 
 ln -is vim $HOME/.vim
 ln -is vimrc $HOME/.vimrc
 
 ln -is conkyrc $HOME/.conkyrc
+
+ln -is oblogout.conf /etc/oblogout.conf

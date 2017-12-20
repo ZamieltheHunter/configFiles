@@ -2,5 +2,11 @@ This is a collection of configurations I've used
 The required programs are: zsh, oh-my-zsh(From Robby-Russells Github),
 vim, conky(v 1.10), and openbox.
 
+Openbox assumes you have some commands installed in order to execute certain
+key-combinations.
+It assumes you have: feh, dmenu, xfce4-terminal, oblogout, and xtrlock.
+In addition it assumes your backgrounds are stored in $HOME/.backgrounds
+that is where the script drops the ones that I've included.
+
 The install script should symlink the files from here to their correct
 places.

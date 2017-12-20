@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/mmes/projects/jiji/node_modules/core-util-is/lib'
-let g:netrw_dirhist_2='/home/mmes/.oh-my-zsh/custom/plugins'
-let g:netrw_dirhist_3='/home/mmes/.oh-my-zsh/custom'

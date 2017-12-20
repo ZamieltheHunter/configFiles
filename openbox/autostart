@@ -18,7 +18,7 @@
 
 xset s off -dpms
 tint2 &
-feh --randomize --bg-max /home/mmes/.backgrounds/
+feh --randomize --bg-max $HOME/.backgrounds/
 conky -b &
 compton -b &
 dunst &

@@ -299,16 +299,6 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
-  <keybind key="W-e">
-    <action name="Execute">
-      <startupnotify>
-        <enabled>true</enabled>
-        <name>Konqueror</name>
-      </startupnotify>
-      <command>kfmclient openProfile filemanagement</command>
-    </action>
-  </keybind>
-
   <keybind key="W-Up">
       <action name="Maximize"/> 
   </keybind>
@@ -359,7 +349,7 @@
   </keybind>
   <keybind key="W-q">
     <action name="Execute">
-        <command>feh --randomize --bg-max /home/mmes/.backgrounds/</command>
+        <command>feh --randomize --bg-max $HOME/.backgrounds/</command>
     </action>
   </keybind>
   <keybind key="W-l">
