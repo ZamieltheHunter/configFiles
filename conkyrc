@@ -38,39 +38,42 @@ conky.config = {
 	show_graph_range = false,
 	temperature_unit = 'celsius',
     template1 = "${alignc} ${color crimson}",
-    override_utf8_locale=yes,
+    template2 = "${color indigo}$hr",
+    override_utf8_locale=yes
 };
 
 conky.text = [[
 ${alignc}${color cyan}$sysname $kernel on $machine}
-${color magenta}$hr
+$template2
 ${color cyan}Date: ${color darkgrey}${time %A, %B %e, %Y}  ${color cyan}Time: ${color darkgrey}${time %H:%M:%S}
 ${color cyan}Uptime:${color darkgrey} $uptime  ${color cyan}Users: ${color darkgrey}$user_number
-${color magenta}$hr
+$template2
 ${color cyan}Sessions:
 ${color darkgrey}${exec who}
-${color magenta}$hr
-Performance:
+$template2
+${color mediumvioletred}Performance:
 ${color cyan}Total CPU Usage:${color white} ${cpu cpu0}%
 $template1${cpubar}
 ${color darkcyan} CPU1: ${color darkgrey}${cpu cpu1}%${color darkcyan} CPU2: ${color darkgrey}${cpu cpu2}% ${color darkcyan}CPU3: ${color darkgrey}${cpu cpu3}% ${color darkcyan}CPU4: ${color darkgrey}${cpu cpu4}% 
 $template1${cpugraph cpu0 50,375 DC143C}
-${color magenta}$hr${if_mounted /}
-File systems:
+${color cyan}RAM Usage:${color darkgrey} $mem/$memmax - $memperc%
+$template1${membar 4}
+$template2${if_mounted /}
+${color mediumvioletred}File systems:
 ${color cyan} / ${color darkgrey}${fs_used /}/${fs_size /}
 $template1${fs_bar /}$endif$if_gw
-${color magenta}$hr
-${color magenta}Networking:
+$template2
+${color mediumvioletred}Networking:
 ${color cyan}Interface: ${color white}$gw_iface ${color cyan}Gateway: ${color white}$gw_ip
 ${color cyan} Up: ${color darkgrey} ${upspeed enp0s25} ${color grey} - ${color cyan} Down: ${color darkgrey} ${downspeed enp0s25} 
-${color magenta}$hr$endif
-Processes:
+$template2$endif
+${color mediumvioletred}Processes:
 ${color cyan}Name              PID   CPU%   MEM%
 ${color darkgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
 ${color darkgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
 ${color darkgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
 ${color darkgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
-${color magenta}$hr
-Weather:
-${color darkgrey}${texeci 1800 curl -s wttr.in/Detroit?m | sed -n '3,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}'}
+$template2
+${color mediumvioletred}Weather:
+${color darkgrey}${texeci 1800 curl -s "wttr.in/Detroit?m" | sed -n '3,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}'}
 ]];
