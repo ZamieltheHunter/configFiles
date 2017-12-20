@@ -1,8 +1,16 @@
 !#/bin/sh/
 
-cp -rp custom ~/.oh-my-zsh/
-cp -rp openbox ~/.config/
-cp -rp .vim ~/
-cp .vimrc ~/
-cp .conkyrc ~/
-cp .zshrc ~/
+mkdir -p ~/.oh-my-zsh/custom
+ln -s ./custom/aliases.zsh ~/.oh-my-zsh/custom/
+ln -s ./custom/exports.zsh ~/.oh-my-zsh/custom/
+ln -s ./custom/shellproxy ~/.oh-my-zsh/custom/
+ln -s zshrc ~/.zshrc
+
+mkdir -p ~/.config/openbox/
+ln -s ./openbox/rc.xml ~/.config/openbox/
+ln -s .openbox/autostart ~/.config/openbox/
+
+ln -s vim ~/.vim
+ln -s vimrc ~/.vimrc
+
+ln -s conkyrc ~/.conkyrc

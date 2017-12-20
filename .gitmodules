@@ -2,14 +2,14 @@
 	path = .vim/bundle/jshint2
 	url = https://github.com/Shutnik/jshint2.vim.git
 [submodule ".vim/bundle/vim-colorschemes"]
-	path = .vim/bundle/vim-colorschemes
+	path = vim/bundle/vim-colorschemes
 	url = https://github.com/flazz/vim-colorschemes.git
 [submodule ".vim/bundle/jshint2.vim"]
-	path = .vim/bundle/jshint2.vim
+	path = vim/bundle/jshint2.vim
 	url = https://github.com/Shutnik/jshint2.vim.git
 [submodule ".vim/bundle/vim-javascript"]
-	path = .vim/bundle/vim-javascript
+	path = vim/bundle/vim-javascript
 	url = https://github.com/pangloss/vim-javascript.git
 [submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
+	path = vim/bundle/vim-sensible
 	url = git://github.com/tpope/vim-sensible.git
