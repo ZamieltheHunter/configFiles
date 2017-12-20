@@ -1,0 +1,8 @@
+!#/bin/sh/
+
+cp -rp custom ~/.oh-my-zsh/
+cp -rp openbox ~/.config/
+cp -rp .vim ~/
+cp .vimrc ~/
+cp .conkyrc ~/
+cp .zshrc ~/
