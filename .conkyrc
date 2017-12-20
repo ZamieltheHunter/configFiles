@@ -1,0 +1,76 @@
+-- Chris Barden ConkyRC
+conky.config = {
+	alignment = 'top_left',
+	background = false,
+	border_width = 1,
+	cpu_avg_samples = 2,
+	default_color = 'white',
+	default_outline_color = 'white',
+	default_shade_color = 'white',
+    default_bar_width = 375,
+    default_bar_height = 6,
+	draw_borders = false,
+	draw_graph_borders = true,
+	draw_outline = false,
+	draw_shades = false,
+	use_xft = true,
+    font = 'Liberation Mono:Regular:size=10',
+--    font = 'Fira Mono:Regular:size=10',
+	gap_x = 7,
+	gap_y = 10,
+	minimum_width = 400, minimum_height = 500,
+	net_avg_samples = 2,
+	no_buffers = true,
+	out_to_console = false,
+	out_to_stderr = false,
+	extra_newline = false,
+	own_window = true,
+	own_window_class = 'Conky',
+	own_window_type = 'desktop',
+	own_window_argb_visual = true,
+	own_window_argb_value = 200,
+	short_units = true,
+	stippled_borders = 0,
+	update_interval = 1.0,
+	uppercase = false,
+	use_spacer = 'none',
+	show_graph_scale = false,
+	show_graph_range = false,
+	temperature_unit = 'celsius',
+    template1 = "${alignc} ${color crimson}",
+    override_utf8_locale=yes,
+};
+
+conky.text = [[
+${alignc}${color cyan}$sysname $kernel on $machine}
+${color magenta}$hr
+${color cyan}Date: ${color darkgrey}${time %A, %B %e, %Y}  ${color cyan}Time: ${color darkgrey}${time %H:%M:%S}
+${color cyan}Uptime:${color darkgrey} $uptime  ${color cyan}Users: ${color darkgrey}$user_number
+${color magenta}$hr
+${color cyan}Sessions:
+${color darkgrey}${exec who}
+${color magenta}$hr
+Performance:
+${color cyan}Total CPU Usage:${color white} ${cpu cpu0}%
+$template1${cpubar}
+${color darkcyan} CPU1: ${color darkgrey}${cpu cpu1}%${color darkcyan} CPU2: ${color darkgrey}${cpu cpu2}% ${color darkcyan}CPU3: ${color darkgrey}${cpu cpu3}% ${color darkcyan}CPU4: ${color darkgrey}${cpu cpu4}% 
+$template1${cpugraph cpu0 50,375 DC143C}
+${color magenta}$hr${if_mounted /}
+File systems:
+${color cyan} / ${color darkgrey}${fs_used /}/${fs_size /}
+$template1${fs_bar /}$endif$if_gw
+${color magenta}$hr
+${color magenta}Networking:
+${color cyan}Interface: ${color white}$gw_iface ${color cyan}Gateway: ${color white}$gw_ip
+${color cyan} Up: ${color darkgrey} ${upspeed enp0s25} ${color grey} - ${color cyan} Down: ${color darkgrey} ${downspeed enp0s25} 
+${color magenta}$hr$endif
+Processes:
+${color cyan}Name              PID   CPU%   MEM%
+${color darkgrey} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
+${color darkgrey} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
+${color darkgrey} ${top name 3} ${top pid 3} ${top cpu 3} ${top mem 3}
+${color darkgrey} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
+${color magenta}$hr
+Weather:
+${color darkgrey}${texeci 1800 curl -s wttr.in/Detroit?m | sed -n '3,7{s/\d27\[[0-9;]*m//g;s/^..//;s/ *$//;p}'}
+]];

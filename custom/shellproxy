@@ -1,0 +1,20 @@
+#!/bin/zsh
+# This file is not currently used, I couldn't get these exports
+# to carry over properly.  I might restore it as a file for 
+# oh-my-zsh to load if I can set an environment variable to be used
+# for non-interactive shells currently proxy is set in .zshenv
+
+#Exports for proxy with Squid
+export http_proxy="http://127.0.0.1:10000"
+export https_proxy="http://127.0.0.1:10000"
+export ftp_proxy="ftp://127.0.0.1:10000"
+
+#Exports if I need to switch back from Squid
+#
+#export MMUSER = ""
+#export MMPASSWORD = "" 
+#export MMPROXY = "10.102.184.190"
+#export MMPROXYPORT = "8080"
+#export http_proxy="http://$MMUSER:$MMPASSWORD@$MMPROXY:$MMPROXYPORT"
+#export ftp_proxy="ftp://$MMUSER:$MMPASSWORD@$MMPROXY:$MMPROXYPORT"
+#export http_proxy="http://$MMUSER:$MMPASSWORD@$MMPROXY:$MMPROXYPORT"
