@@ -1,0 +1,6 @@
+This is a collection of configurations I've used
+The required programs are: zsh, oh-my-zsh(From Robby-Russells Github),
+vim, conky(v 1.10), and openbox.
+
+The install script should symlink the files from here to their correct
+places.
