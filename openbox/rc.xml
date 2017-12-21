@@ -260,7 +260,7 @@
   <!-- Fun Keybind to randomize the background -->
   <keybind key="W-Q">
     <action name="Execute">
-            <command>feh --randomize --bg-fill $HOME/.backgrounds</command>
+            <command>feh --randomize --bg-max $HOME/.backgrounds</command>
     </action>
   </keybind>
   <keybind key="W-L">
@@ -339,9 +339,9 @@
     <action name="Execute">
       <startupnotify>
         <enabled>true</enabled>
-        <name>XFCE4-term</name>
+        <name>Terminal</name>
       </startupnotify>
-      <command>xfce4-terminal</command>
+      <command>lxterminal</command>
     </action>
   </keybind>
   <keybind key="W-p">

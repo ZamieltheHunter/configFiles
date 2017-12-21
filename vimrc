@@ -13,3 +13,4 @@ set tabstop=4
 set expandtab
 set cursorline
 colorscheme vibrantink
+hi Normal guibg=NONE ctermbg=NONE
