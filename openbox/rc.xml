@@ -260,12 +260,7 @@
   <!-- Fun Keybind to randomize the background -->
   <keybind key="W-Q">
     <action name="Execute">
-            <command>feh --randomize --bg-max $HOME/.backgrounds</command>
-    </action>
-  </keybind>
-  <keybind key="W-L">
-    <action name="Execute">
-	    <command>oblogout</command>
+        <command>feh --randomize --bg-max /home/mmes/.backgrounds</command>
     </action>
   </keybind>
 
@@ -358,7 +353,7 @@
         <command>feh --randomize --bg-max $HOME/.backgrounds/</command>
     </action>
   </keybind>
-  <keybind key="W-l">
+  <keybind key="W-L">
     <action name="Execute">
         <command>xtrlock -b</command>
     </action>
