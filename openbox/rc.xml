@@ -232,6 +232,42 @@
   <keybind key="W-d">
     <action name="ToggleShowDesktop"/>
   </keybind>
+  <!-- Keybindings for window Resizing/Moving -->
+  <keybind key="W-Right">
+    <action name="Unmaximize"></action>
+    <action name="MoveResizeTo">
+      <x>-0</x>
+      <y>0</y>
+      <width>50%</width>
+      <height>100%</height>
+    </action>
+  </keybind>
+  <keybind key="W-Left">
+    <action name="Unmaximize"></action>
+    <action name="MoveResizeTo">
+      <x>0</x>
+      <y>0</y>
+      <width>50%</width>
+      <height>100%</height>
+    </action>
+  </keybind>
+  <keybind key="W-Up">
+    <action name="Maximize"></action>
+  </keybind>
+  <keybind key="W-Down">
+    <action name="Unmaximize"></action>
+  </keybind>
+  <!-- Fun Keybind to randomize the background -->
+  <keybind key="W-Q">
+    <action name="Execute">
+            <command>feh --randomize --bg-fill $HOME/.backgrounds</command>
+    </action>
+  </keybind>
+  <keybind key="W-L">
+    <action name="Execute">
+	    <command>oblogout</command>
+    </action>
+  </keybind>
 
   <!-- Keybindings for windows -->
   <keybind key="A-F4">
@@ -299,36 +335,6 @@
   </keybind>
 
   <!-- Keybindings for running applications -->
-  <keybind key="W-Up">
-      <action name="Maximize"/> 
-  </keybind>
-  <keybind key="W-Down">
-      <action name="Unmaximize"/> 
-  </keybind>
-  <keybind key="W-Left">
-      <action name="Unmaximize"> 
-          <direction>horizontal</direction>
-      </action>
-      <action name="Maximize"> 
-          <direction>vertical</direction>
-      </action>
-      <action name="MoveResizeTo">
-          <x>+-0</x>
-          <width>1/2</width>
-      </action>
-  </keybind>
-  <keybind key="W-Right">
-      <action name="Unmaximize"> 
-          <direction>horizontal</direction>
-      </action>
-      <action name="Maximize"> 
-          <direction>vertical</direction>
-      </action>
-      <action name="MoveResizeTo">
-          <x>--0</x>
-          <width>1/2</width>
-      </action>
-  </keybind>
   <keybind key="W-t">
     <action name="Execute">
       <startupnotify>
@@ -342,7 +348,7 @@
     <action name="Execute">
       <startupnotify>
         <enabled>true</enabled>
-        <name>dmenu</name>
+        <name>Launcher</name>
       </startupnotify>
       <command>dmenu_run -f -b -l 10 -dim 0.5 -nb black -nf darkslategrey -sb midnightblue -sf mediumorchid -fn Monospace-12:normal</command>
     </action>
