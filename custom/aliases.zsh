@@ -6,3 +6,4 @@ alias evan!="ssh 10.102.177.204 feh -FD 3 --cycle-once Alert.png && wmctrl -R Al
 alias cafe="ssh 10.102.177.204 feh -FD 3 --cycle-once cafe.png && wmctrl -R cafe"
 alias pc=chromium --proxy-server="127.0.0.1:10000"
 alias rsync="rsync --progress"
+alias jiji="(cd /home/mmes/projects/jiji && exec npm run dev -- -b root)"

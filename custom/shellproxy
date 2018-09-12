@@ -6,8 +6,11 @@
 
 #Exports for proxy with Squid
 export http_proxy="http://127.0.0.1:10000"
-export https_proxy="http://127.0.0.1:10000"
+export https_proxy="https://127.0.0.1:10000"
 export ftp_proxy="ftp://127.0.0.1:10000"
+export HTTP_PROXY=$http_proxy
+export HTTPS_PROXY=$https_proxy
+export FTP_PROXY=$ftp_proxy
 
 #Exports if I need to switch back from Squid
 #
