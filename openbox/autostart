@@ -19,6 +19,7 @@
 xset s off -dpms
 tint2 &
 feh --randomize --bg-max $HOME/.backgrounds/
-conky -b &
-compton -b &
+compton -bCG &
 dunst &
+conky -b &
+screen -dm -S UMS /opt/ums/UMS.sh 
