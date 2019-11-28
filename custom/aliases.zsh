@@ -2,8 +2,11 @@
 alias nwd='nw --ignore-certificate-errors --enable-transparent-visuals --disable-gpu'
 
 #aliases for putting things up on Evan's big screen
-alias evan!="ssh 10.102.177.204 feh -FD 3 --cycle-once Alert.png && wmctrl -R Alert"
-alias cafe="ssh 10.102.177.204 feh -FD 3 --cycle-once cafe.png && wmctrl -R cafe"
-alias pc=chromium --proxy-server="127.0.0.1:10000"
-alias rsync="rsync --progress"
-alias jiji="(cd /home/mmes/projects/jiji && exec npm run dev -- -b root)"
+alias rsync='rsync --progress'
+alias jiji='(cd /home/mmes/projects/jiji && exec npm run dev -- -tb root)'
+alias namegen='(cd /home/mmes/projects/python/nameGen/ && python3 nameGen.py)'
+alias kreboot='sudo systemctl start kreboot.service'
+alias vim='nvim'
+alias sudo='sudo '
+alias andrun='andr'
+alias cdAndr='CDPATH=/home/mmes/AndroidStudioProjects/MarelliController HOME=/home/mmes/AndroidStudioProjects/MarelliController cd'

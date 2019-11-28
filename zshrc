@@ -56,10 +56,12 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git screen arch)
+plugins=(git screen archlinux)
 
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/home/mmes/.gem/ruby/2.5.0/bin:$PATH
+
+export fpath=(/home/mmes/.oh-my-zsh/custom/completions $fpath)
 
 source $ZSH/oh-my-zsh.sh
 
